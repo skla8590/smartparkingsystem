@@ -185,7 +185,7 @@ function submitStep3(event) {
             if (res.status === 200) {
                 clearInterval(timerInterval);
                 alert("[OTP Success] 인증 완료")
-                window.location.href = "/main.jsp"; // TODO 변경시 경로 수정
+                window.location.href = "/main"; // TODO 변경시 경로 수정
             } else if (res.status === 401) {
                 alert("[OTP Fail] 인증번호가 일치 하지 않습니다.")
             } else if (res.status === 403) {
