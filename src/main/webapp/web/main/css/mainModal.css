@@ -1,0 +1,80 @@
+/* 입차 모달 전용 스타일 */
+#input-carNum:focus {
+    border-color: #0d6efd !important;
+    box-shadow: 0 0 0 0.25 margin-bottom rgba(13, 110, 253, 0.1) !important;
+}
+
+/* 라디오 버튼(차종 선택) 커스텀 */
+.btn-check:checked + .btn-outline-primary {
+    background-color: #e7f1ff !important;
+    color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.1);
+}
+
+.btn-outline-primary {
+    border: 2px solid #eee !important;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #f8f9fa !important;
+    border-color: #ccc !important;
+    color: #333;
+}
+
+/* 모달 내부 간격 및 스타일 개선 */
+#parkingModal .modal-body {
+    padding: 2rem !important; /* 내부 여백 대폭 확대 */
+}
+
+/* 출차 정보 리스트 (Table 대체 스타일) */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 항목 간 간격 */
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.info-label {
+    margin-top: 15px;
+    display: block;
+    font-size: 1.15rem !important;
+    font-weight: 650 !important;
+    color: #333 !important;
+    margin-bottom: 12px !important;
+}
+
+.info-value {
+    font-weight: 600;
+    text-align: right;
+}
+
+.info-value
+
+    /* 총 요금 강조 */
+#info-totalPrice {
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+}
+
+/* 버튼 디자인 개선 */
+.modal-footer {
+    border-top: none !important;
+    padding: 0 2rem 2rem 2rem !important;
+}
+
+.modal-footer .btn {
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+}

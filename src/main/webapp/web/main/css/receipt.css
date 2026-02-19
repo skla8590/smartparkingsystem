@@ -1,0 +1,84 @@
+@media print {
+    @page { margin: 10mm; }
+
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background: #fff !important;
+    }
+
+    body > * { display: none !important; }
+    #modal-id,
+    .modal-header,
+    .modal-title {
+        display: none !important;
+    }
+
+    /* 출력 대상 */
+    #parkingModal {
+        display: block !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        visibility: visible !important;
+    }
+
+    /* 모달 내부의 영수증 섹션 및 하위 요소 강제 표시 */
+    .modal-dialog, .modal-content, .modal-body,
+    #section-receipt, #section-receipt *,
+    #receipt-print-area, #receipt-print-area * {
+        display: block !important;
+        visibility: visible !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* 레이아웃 복구 (영수증 내부 정렬용) */
+    .d-flex { display: flex !important; }
+    .justify-content-between { justify-content: space-between !important; }
+    .fw-bold { font-weight: bold !important; }
+    .text-primary { color: #0d6efd !important; }
+    .text-danger { color: #dc3545 !important; }
+
+    /* [핵심] 출력 시 버튼, 헤더, 푸터 절대 숨김 */
+    .modal-header,
+    .modal-footer,
+    .btn,
+    .btn-close,
+    .d-print-none {
+        display: none !important;
+        height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* 출력용 영수증 내부 텍스트 배치 */
+    #receipt-print-area .d-flex {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+
+    #receipt-print-area .flex-column {
+        flex-direction: column !important;
+    }
+
+    /* 출력용 영수증 박스 보정 */
+    #receipt-print-area, .p-4.border {
+        width: 95% !important;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+        border: 2px solid #000 !important; /* 출력 시에는 명확한 실선 */
+        padding: 30px !important;
+    }
+
+    /* 영수증 내 hr 실선 복구 */
+    hr {
+        display: block !important;
+        border-top: 1px solid #000 !important;
+        opacity: 1 !important;
+        margin: 15px 0 !important;
+    }
+}
